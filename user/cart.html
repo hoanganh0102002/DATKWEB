@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - VENICE</title>
+    <link rel="stylesheet" href="css/style_cart.css"> </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <h1><i class="fa-solid fa-car"></i> VENICE</h1>
+                <p>Phụ tùng ô tô Việt Nam</p>
+            </a>
+            <form class="search-bar">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="box-user">
+                <i class="fa-solid fa-user"></i>
+                <div>
+                    <span><a href="account.html">Tài khoản </a></span>
+                </div>
+            </div>
+            <div class="header-info">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <span class="phone-number">088.xxx.xxxx</span>
+                    <span>Hotline đặt hàng</span>
+                </div>
+            </div>
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                    <span class="cart-count">Sản Phẩm (3)</span>
+                    <span><a href="cart.html"> Giỏ hàng</a></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-container">
+        <h1 class="page-title-cart">Giỏ hàng</h1>
+        <p class="page-subtitle">Quản lý sản phẩm và thông tin thanh toán</p>
+
+        <div class="cart-main-layout">
+            <section class="cart-items-section">
+                <div class="cart-header">
+                    <span class="icon-checked">✔</span>
+                    <button class="btn-remove-all">xóa tất cả</button>
+                </div>
+
+                <a class="cart-item" href="Product_details.html">
+                    
+                    <span class="icon-checked item-check">✔</span>
+                    
+                    <div class="item-details">
+                        <img src="../user/image/cart/Screenshot 2025-11-02 161816.png" alt="Áp suất lốp Texpad" class="item-image">
+                        <div class="item-info">
+                            <p class="item-name">Áp suất lốp Texpad tích hợp màn hình odo VF3</p>
+                            <p class="item-price-unit">2,000,000 đ</p>
+                            <p class="item-sku">SKU:78605</p>
+                            <div class="item-quantity">
+                                <span class="qty-control">-</span>
+                                <span class="qty-value">1</span>
+                                <span class="qty-control">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="item-total-price">2,000,000 đ</p>
+                    <button class="btn-remove-item">X</button>
+                    </a>
+                </a>
+
+                <div class="cart-item">
+                    <span class="icon-checked item-check">✔</span>
+                    <div class="item-details">
+                        <img src="../user/image/cart/Screenshot 2025-11-06 074347.png" alt="Cảm biến áp suất lốp Icar" class="item-image">
+                        <div class="item-info">
+                            <p class="item-name">Cảm biến áp suất lốp Icar Ellisaffe C398 cho ô tô</p>
+                            <p class="item-price-unit">2,800,000 đ</p>
+                            <p class="item-sku">SKU:7068</p>
+                            <div class="item-quantity">
+                                <span class="qty-control">-</span>
+                                <span class="qty-value">1</span>
+                                <span class="qty-control">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="item-total-price">2,800,000 đ</p>
+                    <button class="btn-remove-item">X</button>
+                </div>
+
+                <div class="cart-item">
+                    <span class="icon-checked item-check">✔</span>
+                    <div class="item-details">
+                        <img src="../user/image/cart/Screenshot 2025-11-06 074413.png" alt="Bộ chống trộm Lotus Việt" class="item-image">
+                        <div class="item-info">
+                            <p class="item-name">Bộ chống trộm Lotus Việt</p>
+                            <p class="item-price-unit">1,000,000 đ</p>
+                            <p class="item-sku">SKU:0499</p>
+                            <div class="item-quantity">
+                                <span class="qty-control">-</span>
+                                <span class="qty-value">1</span>
+                                <span class="qty-control">+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="item-total-price">1,000,000 đ</p>
+                    <button class="btn-remove-item">X</button>
+                </div>
+
+                <div class="cart-summary">
+                    <button class="btn-checkout">ĐẶT HÀNG NGAY</button>
+                    <div class="summary-details">
+                        <p>Tổng số sản phẩm: <span>3</span></p>
+                        <p>Tạm tính: <span>5.800.000 đ</span></p>
+                        <p class="total-final">Tổng cộng: <span>5.800.000 đ</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="checkout-form-section">
+                <div class="form-group-box basic-info">
+                    <h2>Thông tin cơ bản</h2>
+                    <label for="name">Họ và tên *</label>
+                    <input type="text" id="name" placeholder="Nhập họ và tên của bạn">
+                    <label for="phone">Số điện thoại *</label>
+                    <input type="text" id="phone" placeholder="Nhập số điện thoại">
+
+                    <label for="discount">Mã giảm giá</label>
+                    <div class="discount-area">
+                        <input type="text" id="discount" placeholder="Nhập mã giảm giá">
+                        <button class="btn-apply">ÁP DỤNG</button>
+                    </div>
+                </div>
+
+                <div class="form-group-box shipping-address">   
+                    <label for="name">Địa chỉ giao hàng</label>
+                    <div class="select-row">
+                        <select name="province" id="province"><option value="">Chọn tỉnh/thành</option></select>
+                        <select name="district" id="district"><option value="">Chọn quận/huyện</option></select>
+                    </div>
+                    <select name="ward" id="ward"><option value="">Chọn phường/xã</option></select>
+                    <input type="text" placeholder="Địa chỉ cụ thể, số nhà, tên đường">
+                </div>
+
+                <div class="form-group-box payment-method">
+                    <label for="name">Phương thức thanh toán</label>
+                    <div class="radio-option">
+                        <label>Thanh toán khi nhận hàng (COD)</label>
+                        <span class="toggle-switch"></span>
+                    </div>
+                    <div class="radio-option">
+                        <label>Chuyển khoản ngân hàng</label>
+                        <span class="toggle-switch "></span> 
+                        <!-- /*active */ -->
+                    </div>
+                </div>
+
+                <div class="form-group-box notes">
+                    <label for="name">Ghi chú</label>
+                    <textarea placeholder="Ghi chú cho đơn hàng (không bắt buộc)"></textarea>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-col">
+                <h4>LIÊN HỆ</h4>
+                <p>Địa chỉ: www.wwww</p>
+                <p>Điện thoại: 099.999.9999</p>
+                <p>Email: www@email.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>CHÍNH SÁCH</h4>
+                <ul>
+                    <li><a href="#">Tìm kiếm</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách đổi trả, bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-col policy-links">
+                <h4>&nbsp;</h4> 
+                <ul>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Chính sách kiểm hàng</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>HƯỚNG DẪN</h4>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Hướng dẫn lắp đặt</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

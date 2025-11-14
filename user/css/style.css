@@ -1,0 +1,128 @@
+/* ======== 1. CÀI ĐẶT CHUNG ======== */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Tránh cuộn trang */
+}
+
+/* ======== 2. CONTAINER CHÍNH (TOÀN MÀN HÌNH VÀ ẢNH NỀN) ======== */
+.full-page-container {
+    width: 100%;
+    height: 100vh;
+    display: flex; /* Dùng flexbox để căn chỉnh form */
+    justify-content: flex-start; /* Căn form sang trái */
+    align-items: center; /* Căn form theo chiều dọc */
+    
+    /* Ảnh nền lớn cho toàn bộ trang */
+    background-image: url('../image/hinh-nen-sieu-xe-2.jpg'); /* Thay bằng ảnh của bạn */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ======== 3. KHU VỰC CHỨA FORM (OVERLAY) ======== */
+.form-overlay {
+    width: 40%; /* Chiếm 40% chiều rộng màn hình */
+    height: 100%; /* Chiếm toàn bộ chiều cao */
+    background-color: rgba(64, 224, 208, 0.9); /* Màu xanh ngọc (Cyan) bán trong suốt */
+    display: flex;
+    justify-content: center; /* Căn form bên trong overlay */
+    align-items: center;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+}
+
+/* ======== 4. FORM VÀ CÁC THÀNH PHẦN CỦA FORM ======== */
+form {
+    width: 80%; /* Form chiếm 80% chiều rộng của .form-overlay (40% của màn hình) */
+    max-width: 450px; /* Giới hạn kích thước tối đa của form */
+    text-align: center; /* Để H2 và button căn giữa */
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333; /* Chữ "ĐĂNG NHẬP" màu sẫm */
+    margin-bottom: 2.5rem;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 15px 20px; /* Thêm padding ngang */
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px; /* Bo góc tròn hình chữ nhật */
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: left; /* KHÔNG căn giữa chữ trong ô input */
+}
+/* Placeholder màu sẫm hơn để dễ đọc trên nền sáng */
+input::placeholder {
+    color: #555;
+}
+
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px; /* Bo góc tròn hình chữ nhật */
+    background-color: #ffffff; /* Nút màu trắng */
+    color: #333; /* Chữ màu sẫm */
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px; /* Khoảng cách với input cuối cùng */
+}
+
+.submit-button:hover {
+    background-color: #f0f0f0;
+}
+
+.toggle-link {
+    margin-top: 25px; /* Khoảng cách với nút Đăng nhập */
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.toggle-link a {
+    color: #0056b3; /* Link màu xanh dương */
+    text-decoration: none;
+}
+.toggle-link a:hover {
+    text-decoration: underline;
+}
+
+/* ======== 5. RESPONSIVE (CHO DI ĐỘNG) ======== */
+@media (max-width: 768px) {
+    .form-overlay {
+        width: 100%; /* Trên di động, form chiếm toàn bộ màn hình */
+        background-color: rgba(64, 224, 208, 0.95); /* Tăng độ mờ */
+    }
+}
+/* ==================================
+THÊM ĐOẠN CODE NÀY VÀO CUỐI FILE CSS
+==================================
+*/
+
+/* Căn chỉnh cho "Hiện mật khẩu" */
+.options {
+    width: 100%; /* Dãn 100% theo form */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Căn sang trái (KHÔNG CĂN GIỮA) */
+    margin-bottom: 15px; /* Khoảng cách trước khi tới nút */
+    color: #333; /* Màu chữ */
+    font-weight: bold;
+}
+
+.options input {
+    /* Reset lại các thuộc tính mà input[type="text"] đã set,
+    để checkbox hiển thị đúng
+    */
+    width: auto; /* Reset width */
+    margin-bottom: 0; /* Reset margin */
+    margin-right: 8px; /* Khoảng cách giữa checkbox và chữ */
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venice Admin Dashboard</title>
+    <link rel="stylesheet" href="../admin/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <header class="header">
+            <div class="logo">
+                <div class="logo-main">
+                    <i class="fa-solid fa-car"></i> <h1>VENICE</h1>
+                </div>
+                <span class="logo-subtext">Phụ tùng ô tô Việt Nam</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <div class="admin-profile">
+                <div class="profile-pic">
+                    <img src="../admin/image/images.png" alt="avatar" class="avatar"></div>
+                <h3>Admin</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-users"></i> Quản lý nhân viên</a></li>
+                    <li><a href="#"><i class="fa-solid fa-history"></i> Lịch sử mua hàng</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cog"></i> Cài đặt</a></li>
+                    <li><a href="#" id="logout-button"><i class="fa-solid fa-sign-out-alt"></i> Thoát</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="widget-grid">
+                <div class="widget card">
+                    <i class="fa-solid fa-shopping-cart fa-2x"></i>
+                    <div class="stat-info">
+                        <p>Tổng đơn hàng</p>
+                        <span>2899</span>
+                    </div>
+                </div>
+
+                <div class="widget chart-card">
+                    <canvas id="topBarChart"></canvas>
+                </div>
+
+                <div class="widget card">
+                    <i class="fa-solid fa-user fa-2x"></i>
+                    <div class="stat-info">
+                        <p>Tổng người dùng</p>
+                        <span>599</span>
+                    </div>
+                </div>
+                <div class="widget card">
+                    <i class="fa-solid fa-dollar-sign fa-2x"></i>
+                    <div class="stat-info">
+                        <p>Tổng doanh thu</p>
+                        <span>9.4 tỷ</span>
+                    </div>
+                </div>
+
+                <div class="widget chart-card">
+                    <p style="font-weight: bold; text-align: center; margin-bottom: 10px;">Dữ liệu doanh thu và chạy Ads</p>
+                    <canvas id="comboChart"></canvas>
+                </div>
+               <div class="widget chart-card" style="position: relative;"> <canvas id="customerDonutChart"></canvas> <div class="chart-legend">
+                        <p>Khách hàng mới: <span style="color: #00bcd4;">⬆ 70%</span></p> <p>Khách hàng cũ: <span style="color: #f44336;">⬇ 30%</span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-section">
+                <h4>LIÊN HỆ</h4>
+                <p>Địa chỉ: www.venice.vn</p>
+                <p>Điện thoại: 099.999.9999</p>
+                <p>Email: info@venice.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>CHÍNH SÁCH</h4>
+                <p><a href="#">Tìm kiếm</a></p>
+                <p><a href="#">Giới thiệu</a></p>
+                <p><a href="#">Chính sách đổi trả, bảo hành</a></p>
+            </div>
+            <div class="footer-section">
+                <p><a href="#">Chính sách bảo mật</a></p>
+                <p><a href="#">Chính sách kiểm hàng</a></p>
+                <p><a href="#">Chính sách vận chuyển</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>HƯỚNG DẪN</h4>
+                <p><a href="#">Hướng dẫn mua hàng</a></p>
+                <p><a href="#">Hướng dẫn lắp đặt</a></p>
+            </div>
+        </footer>
+    </div>
+    <script src = "js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

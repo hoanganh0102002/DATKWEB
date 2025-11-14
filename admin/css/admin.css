@@ -1,0 +1,278 @@
+/* ==== Cài đặt chung ==== */
+:root {
+    --primary-color: #a0e9ff; /* Màu xanh nhạt/cyan chính */
+    --secondary-color: #333;
+    --bg-color: #f4f7f6; /* Màu nền xám nhạt */
+    --card-bg: #ffffff;
+    --text-color: #555;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* ==== Bố cục Dashboard chính (CSS Grid) ==== */
+.dashboard-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 250px 1fr; /* Sidebar 250px, main content tự dãn */
+    grid-template-rows: 70px 1fr auto; /* Header 70px, main tự dãn, footer tự co */
+    min-height: 100vh;
+}
+
+/* ==== Header ==== */
+.header {
+    grid-area: header;
+    background-color:  #a0e9ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: var(--shadow);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.header .logo {
+    display: flex;
+    flex-direction: column;  /* Xếp 2 hàng (dọc) */
+    align-items: center;     /* CĂN GIỮA tất cả */
+    line-height: 1.1;        /* Khoảng cách giữa 2 dòng */
+}
+
+.header .logo-main {
+    display: flex;
+    align-items: center;
+    color: #f44336;          /* === MÀU ĐỎ === */
+    font-weight: bold;
+}
+
+.header .logo-main i {
+    font-size: 30px;         /* Kích thước icon xe */
+    margin-right: 10px;
+}
+
+.header .logo-main h1 {
+    font-size: 28px;         /* Kích thước chữ VENICE */
+    margin: 0;
+}
+
+.header .logo-subtext {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;             /* === MÀU ĐEN/XÁM ĐẬM === */
+}
+.header .logo img {
+    height: 40px; /* Điều chỉnh */
+    margin-right: 10px;
+}
+
+.search-bar {
+    position: relative;
+}
+.search-bar input {
+    width: 300px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+}
+.search-bar .fa-magnifying-glass {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+/* ==== Sidebar ==== */
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--card-bg);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.admin-profile {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.admin-profile .profile-pic {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.admin-profile h3 {
+    color: var(--secondary-color);
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+.sidebar-nav li {
+    margin-bottom: 10px;
+}
+.sidebar-nav a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 188, 212, 0.3);
+}
+.sidebar-nav a i {
+    width: 30px; /* Căn chỉnh icon cho thẳng hàng */
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* ==== Main Content ==== */
+.main-content {
+    grid-area: main;
+    padding: 30px;
+}
+
+/* Bố cục lưới cho các widget */
+.widget-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
+    grid-gap: 25px; /* Khoảng cách giữa các card */
+}
+
+/* Định dạng chung cho các widget */
+.widget {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* Card thống kê (Đơn hàng, Người dùng, Doanh thu) */
+.widget.card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.widget.card i {
+    padding: 15px;
+    border-radius: 50%;
+    color: #fff;
+}
+/* Màu riêng cho từng icon (bạn có thể đổi) */
+.widget.card:nth-of-type(1) i { background-color: #2196F3; } /* Đơn hàng */
+.widget.card:nth-of-type(3) i { background-color: #FFC107; } /* Người dùng */
+.widget.card:nth-of-type(4) i { background-color: #4CAF50; } /* Doanh thu */
+
+.stat-info p {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+.stat-info span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* Card chứa biểu đồ */
+.widget.chart-card {
+    /* Cho phép biểu đồ lớn hơn */
+    grid-column: span 1; /* Mặc định 1 cột */
+}
+
+/* Chỉnh cho 2 biểu đồ lớn chiếm 2 cột */
+.widget-grid .widget:nth-of-type(2) {
+    grid-column: span 1; /* Sửa lại theo hình ảnh, 3 cột đều */
+}
+.widget-grid .widget:nth-of-type(5) {
+    grid-column: span 1;
+}
+
+/* Placeholder cho biểu đồ */
+.placeholder-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Chiều cao giả */
+    border: 2px dashed #eee;
+    border-radius: 10px;
+    color: #ccc;
+    font-weight: bold;
+}
+.chart-legend {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* ==== Footer ==== */
+.footer {
+    grid-area: footer;
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+    gap: 20px;
+}
+.footer-section h4 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+}
+.footer-section p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.footer-section a {
+    color: #000;
+    transition: opacity 0.3s;
+}
+.footer-section a:hover {
+    opacity: 0.8;
+}
+/* Thêm vào file style.css */
+.widget.chart-card canvas {
+    max-height: 200px; /* Giới hạn chiều cao biểu đồ */
+    width: 100% !important; /* Đảm bảo nó chiếm 100% chiều rộng card */
+}
+
+/* Căn giữa lại chú thích cho đẹp hơn */
+.chart-legend {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold; /* Thêm độ đậm */
+}
+/* Bố cục lưới cho các widget */
+.widget-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
+    grid-gap: 25px; /* Khoảng cách giữa các card */
+}
+
+/* Đảm bảo canvas vừa vặn */
+.widget.chart-card canvas {
+    max-height: 250px; /* Tăng chiều cao 1 chút cho biểu đồ lớn */
+    width: 100% !important;
+}

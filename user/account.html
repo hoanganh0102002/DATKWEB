@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <h1><i class="fa-solid fa-car"></i> VENICE</h1>
+                <p>Phụ tùng ô tô Việt Nam</p>
+            </a>
+            <form class="search-bar">
+                <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="header-info">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <span class="phone-number">088.xxx.xxxx</span>
+                    <span>Hotline đặt hàng</span>
+                </div>
+            </div>
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                    <span class="cart-count">Sản Phẩm (3)</span>
+                    <span> <a href="cart.html">Giỏ hàng</a></span>
+                </div>
+            </div>
+            <div class="box-user">
+                <a href="login.html" id="logout-button" class="logout-btn">
+                   <i class="fa-solid fa-right-from-bracket"></i> 
+                <span>Đăng xuất</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="category-menu">
+                <i class="fa-solid fa-bars"></i>
+                DANH MỤC SẢN PHẨM
+            </div>
+            <ul class="main-menu">
+                <li><a href="#" class="active">TRANG CHỦ</a></li>
+                <li><a href="Product_list.html">SẢN PHẨM</a></li>
+                <li><a href="#">HÀNG ORDER</a></li>
+                <li><a href="#">HÀNG TỒN KHO</a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">LỊCH SỬ</a></li>
+                <a href="#"><i class="fa-solid fa-out"></i></a>
+            </ul>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="left-panel">
+            <h1 class="page-title-cart">Tài Khoản Của Tôi</h1>
+            <p>Bạn chưa đặt mua sản phẩm.</p>
+        </div>
+
+        <div class="right-panel">
+            <div class="profile">
+                <img src="../user/image/account/pngtree-user-flat-character-avatar-png-png-image_4654505.jpg" alt="avatar" class="avatar">
+                <h3>HATN01_xxxx</h3>
+            </div>
+
+            <form class="account-form">
+                <label>Tên đăng nhập
+                    <input type="text" value="********" readonly>
+                </label>
+                <label>Email
+                    <input type="text" value="*********@gmail.com" readonly>
+                </label>
+                <label>Số điện thoại
+                    <input type="text" value="********" readonly>
+                </label>
+                <label>Giới tính</label>
+                <div class="gender">
+                    <label><input type="radio" name="gender"> Nam</label>
+                    <label><input type="radio" name="gender" checked> Nữ</label>
+                    <label><input type="radio" name="gender"> Khác</label>
+                </div>
+                <label>Ngày sinh</label>
+                <div class="dob">
+                    <select><option>****</option></select>
+                    <select><option>****</option></select>
+                    <select><option>****</option></select>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-col">
+                <h4>LIÊN HỆ</h4>
+                <p>Địa chỉ: www.wwww</p>
+                <p>Điện thoại: 099.999.9999</p>
+                <p>Email: www@email.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>CHÍNH SÁCH</h4>
+                <ul>
+                    <li><a href="#">Tìm kiếm</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách đổi trả, bảo hành</a></li>
+                </ul>
+            </div>
+            <div class="footer-col policy-links">
+                <h4>&nbsp;</h4> 
+                <ul>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Chính sách kiểm hàng</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>HƯỚNG DẪN</h4>
+                <ul>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Hướng dẫn lắp đặt</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/register.js"></script>
+</body>
+</html>
