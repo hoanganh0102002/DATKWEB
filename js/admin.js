@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Bạn đã đăng xuất thành công!');
                 
                 // Đường dẫn về trang login (từ /admin/admin.html về /user/login.html)
-                window.location.href = '../user/login.html'; 
+                window.location.href = 'login.html'; 
             });
         }
     });

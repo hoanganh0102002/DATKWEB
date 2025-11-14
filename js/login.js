@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // window.location.href = 'index.html'; 
             if (user.username === 'admin') {
                 // Nếu tên đăng nhập là 'admin', chuyển đến trang admin
-                window.location.href = "../admin/admin.html";
+                window.location.href = "admin.html";
             } else {
                 // Nếu là user khác, chuyển đến trang chủ
                 window.location.href = 'index.html';
