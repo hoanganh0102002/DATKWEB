@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('login-password');
     const showPasswordCheckbox = document.getElementById('show-password');
     showPasswordCheckbox.addEventListener('change', function() {
-        const isChecked = this.checked;
+        const isChecked = this.checked; //thay đổi trạng thái
         passwordInput.type = isChecked ? 'text' : 'password';
     });
 
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Ngăn form submit
-        const username = usernameInput.value;
+        const username = usernameInput.value;//lấy giá trị hiện tại đã nhập vào input
         const password = passwordInput.value;
         // 1. Lấy danh sách users từ localStorage
         // 

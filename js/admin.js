@@ -1,12 +1,12 @@
 // Chờ cho toàn bộ nội dung trang được tải xong
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Lấy "tấm vải" (canvas) mà chúng ta đã tạo
+    // Lấy tham chiếu đến phần tử đây là nơi Chart.js sẽ vẽ biểu đồ.
     const ctx = document.getElementById('customerDonutChart').getContext('2d');
 
     // 1. Dữ liệu (Data)
     const data = {
-        // Chúng ta không cần labels vì chú thích đã ở ngoài
+        // Không cần labels vì chú thích đã ở ngoài
         // labels: ['Khách hàng mới', 'Khách hàng cũ'],
         datasets: [{
             data: [70, 30], // Dữ liệu %
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. Cấu hình (Options)
     const options = {
         type: 'doughnut', // Loại biểu đồ là 'doughnut'
-        data: data,       // Dữd liệu từ bên trên
+        data: data,       // Dữ liệu từ bên trên
         options: {
             responsive: true, // Tự co giãn theo container
             maintainAspectRatio: false, // Tắt duy trì tỷ lệ để vừa vặn
