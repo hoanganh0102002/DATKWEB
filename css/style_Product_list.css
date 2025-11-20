@@ -160,7 +160,7 @@ ul {
 .product-grid {
     display: grid;
     /* Tạo lưới 3 cột với khoảng cách 20px */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 
